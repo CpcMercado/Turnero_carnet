@@ -2,7 +2,7 @@ import { NavLink,Link } from "react-router-dom";
 import { useContext, useState } from "react";
 import { ContextTurnero } from "./ContextTurnero";
 import menu from './menu.png'
-import logo from './logoCpc.png'
+import Logo from './logo.jsx'
 function NavBar() {
     const { usuario, updateUsuario } = useContext(ContextTurnero);
     const [desplegar,setDesplegar] = useState(false)
@@ -19,11 +19,7 @@ function NavBar() {
     return (
         <div className="flex justify-start font-bold nav">
             <NavLink to={"/"}>
-                <img
-                className="logo mx-10"
-                src={logo}
-                alt="logo municipalidad"
-                />
+                <Logo />
             </NavLink>
             <div className={`flex content-center mt-3 burger`} onClick={handleToggleMenu}>
                 <button className="menu">

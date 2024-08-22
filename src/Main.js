@@ -12,27 +12,27 @@ function Main() {
     // Función para verificar la autenticación del usuario
     const verificarAutenticacion = (componente) => {
         if (usuario) {
-        return componente;
+            return componente;
         } else {
-        // Si no hay usuario autenticado, redirigir a la página de inicio de sesión
-        return <Login />;
+            // Si no hay usuario autenticado, redirigir a la página de inicio de sesión
+            return <Login />;
         }
     };
 
     return (
-        <main className='p-2 grow mx-10 fondoMain'>
-        <Routes>
-            <Route path="/" element={<Vista />} />
-            <Route
-            path="/carga"
-            element={verificarAutenticacion(<Carga />)}
-            />
-            <Route
-            path="/disponibles"
-            element={verificarAutenticacion(<Disponibles />)}
-            />
-            <Route path="/login" element={<Login />} />
-        </Routes>
+        <main className="p-2 grow mx-10 fondoMain">
+            <Routes>
+                <Route path="/" element={<Vista />} />
+                <Route
+                    path="/carga"
+                    element={verificarAutenticacion(<Carga />)}
+                />
+                <Route
+                    path="/disponibles"
+                    element={verificarAutenticacion(<Disponibles />)}
+                />
+                <Route path="/login" element={<Login />} />
+            </Routes>
         </main>
     );
 }

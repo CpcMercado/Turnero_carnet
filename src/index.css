@@ -4,12 +4,27 @@
 
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
-html , body , #root {
+html, body, #root {
     height: 100%;
+    margin: 0;
+    padding: 0;
 }
-#root{
+
+#root {
     display: flex;
     flex-direction: column;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+main {
+    flex: 1;
 }
 .color{
     background-color: #004f9f; 
@@ -45,20 +60,20 @@ html , body , #root {
     }
 }
 /* .fondoMain{
-    background-image: url('../public/fondoLogo.png');  
+    background-image: url('logoCpc.png');  
     display: flex;
     justify-content: center;
     background-repeat: no-repeat;
     background-position: center;
 }  */
 .nav{
-    background-color: #467be6;
+    background-color: #59a0e7;
 }
 .active{
     color: aliceblue;
 }
 .ultimoLlamado{
-    background-color: #467be6;
+    background-color: #004f9f;
     margin-top: 5px;
     /* background: radial-gradient(circle,#f4c000,#f07e07); */
 }
@@ -67,9 +82,7 @@ html , body , #root {
     opacity: 0.98;
     margin-top: 5px;
 }
-.requisitos{
-    background-color: #59a0e7;
-}
+
 .menu{
     display: none;
 }
